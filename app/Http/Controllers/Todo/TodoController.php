@@ -14,7 +14,11 @@ class TodoController extends Controller
      */
     public function index()
     {
-        return [['1'=>'do this'],['2'=> 'do that']];
+        //return [['1'=>'do this'],['2'=> 'do that']];
+        return [
+            ['id' => 1, 'label' => 'do this'],
+            ['id' => 2, 'label' => 'do that']
+        ];
     }
 
     /**
