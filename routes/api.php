@@ -14,3 +14,8 @@ use Illuminate\Http\Request;
 */
 
 Route::get('test', 'Todo\TodoController@index');
+
+//Route::get('breweries', ['middleware' => 'cors', function()
+//{
+//    return \Response::json(\App\Brewery::with('beers', 'geocode')->paginate(10), 200);
+//}]);
