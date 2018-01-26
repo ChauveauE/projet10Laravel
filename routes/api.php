@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('test', 'Todo\TodoController@index');
+Route::get('todos', 'Todo\TodoController@index');
 
 //Route::get('breweries', ['middleware' => 'cors', function()
 //{
