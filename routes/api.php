@@ -13,12 +13,4 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('todos', 'Todo\TodoController@index');
-
 Route::get('todos', ['middleware' => 'cors', 'uses' => 'Todo\TodoController@index']);
-
-//Route::get('todos', 'Todo\TodoController@index', ['middleware' => 'cors', function()
-//{
-//    return \Response::json(\App\TodoController::with('id', 'label'));
-//}]);
-
