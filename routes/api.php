@@ -15,12 +15,10 @@ use Illuminate\Http\Request;
 
 Route::get('todos', 'Todo\TodoController@index');
 
-Route::get('todos', 'Todo\TodoController@index', ['middleware' => 'cors', function()
-{
-    return \Response::json(\App\TodoController::with('id', 'label'));
-}]);
+Route::get('todos', ['middleware' => 'cors', 'uses' => 'Todo\TodoController@index']);
 
-//Route::get('breweries', ['middleware' => 'cors', function()
+//Route::get('todos', 'Todo\TodoController@index', ['middleware' => 'cors', function()
 //{
-//    return \Response::json(\App\Brewery::with('beers', 'geocode')->paginate(10), 200);
+//    return \Response::json(\App\TodoController::with('id', 'label'));
 //}]);
+
